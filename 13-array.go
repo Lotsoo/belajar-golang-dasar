@@ -10,13 +10,17 @@ func main() {
 
 	names := [3]string{"lotso", "huggin", "bear"} // [3] => isinya ada 3 elemen, array gaya horizontal
 
-	fruits := [5]string{ // [5] => isinya ada 5 elemen, array gaya vertikal
+	fruits := [...]string{ // [...] => isinya otomatis ditentukan oleh golang
 		"avocado",
 		"grape",
 		"orange",
 		"melon",
 		"watermelon",
 	}
+
+	fmt.Println("Panjang array fruits:", len(fruits))
+
+	fmt.Println("==================================================================")
 
 	for i, car := range cars {
 		fmt.Printf("%d. %s\n", i, car)
